@@ -18,7 +18,8 @@
       "~*": ["./src*"],
       "common/*": ["src/common/*"],
       "components/*": ["src/components/*"],
-      "ui-components/*": ["src/ui-components/*"]
+      "ui-components/*": ["src/ui-components/*"],
+      "styled": ["src/lib/styled"]
     }
   },
   "exclude": ["node_modules"],

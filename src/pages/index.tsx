@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Home = () => {
-  return <div>Welcome to Next.js!</div>;
-};
+  return <div>Dashboard</div>
+}
 
-export default Home;
+export default Home
