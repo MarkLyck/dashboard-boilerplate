@@ -10,6 +10,7 @@
 # misc
 .DS_Store
 package-lock.json
+next-env.d.ts
 
 # logs
 npm-debug.log*
