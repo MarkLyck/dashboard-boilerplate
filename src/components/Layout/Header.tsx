@@ -5,11 +5,24 @@ import styled from 'styled'
 
 const StyledHeader = styled(Layout.Header)`
   background: white;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const Logo = styled.div`
+  background-image: url('https://weeklystocktip.com/static/icons/logo_horizontal_color.svg');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 200px;
 `
 
 const AppHeader = () => (
   <StyledHeader>
-    <div className="logo" />
+    <Logo />
     <Menu mode="horizontal">
       <Menu.Item key="1">
         <Link href="/">
