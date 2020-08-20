@@ -18,6 +18,7 @@ const AppLayout = ({ children }) => (
     <StyledLayout>
       <Header />
       <StyledContent>{children}</StyledContent>
+      {/* <Layout.Footer style={{ textAlign: 'center' }}>Terms and conditions</Layout.Footer> */}
     </StyledLayout>
   </ThemeProvider>
 )

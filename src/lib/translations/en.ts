@@ -22,5 +22,9 @@ export default {
       english: 'english',
       french: 'french',
     },
+    user: {
+      user: 'user',
+      logout: 'logout',
+    },
   },
 }

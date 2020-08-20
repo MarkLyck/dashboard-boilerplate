@@ -4,7 +4,7 @@ import Layout from '~/components/Layout'
 import 'antd/dist/antd.css'
 import 'react-date-range/dist/styles.css' // main style file
 import 'react-date-range/dist/theme/default.css' // theme css file
-import '~/common/utils/iconLibrary'
+import '~/lib/iconLibrary'
 import '~/lib/translations'
 import Providers from '~/lib/Providers'
 

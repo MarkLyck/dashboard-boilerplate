@@ -9,7 +9,7 @@ import withProviders from './decorators/withProviders'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
 
 // icons
-import '../src/common/utils/iconLibrary'
+import '../src/lib/iconLibrary'
 
 addParameters({
   viewport: {

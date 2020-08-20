@@ -7,6 +7,7 @@ import styled from 'styled'
 import Search from './Search'
 import DateSelector from './DateSelector'
 import LanguageSelector from './LanguageSelector'
+import UserMenu from './UserMenu'
 import theme from '~/common/theme'
 
 const StyledHeader = styled(Layout.Header)`
@@ -56,6 +57,7 @@ const AppHeader = () => {
         <Space>
           <Search />
           <DateSelector />
+          <UserMenu />
           <LanguageSelector />
         </Space>
       </Flex>

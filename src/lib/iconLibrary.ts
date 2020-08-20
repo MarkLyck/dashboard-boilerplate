@@ -1,7 +1,11 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 // Regular
-import { faCalendar } from '@fortawesome/pro-regular-svg-icons'
+import {
+  faCalendar as faCalendarReg,
+  faSignOutAlt as faSignOutAltReg,
+  faUser as faUserReg,
+} from '@fortawesome/pro-regular-svg-icons'
 
 // Solid
 import { faExpand, faCompress, faChevronRight } from '@fortawesome/pro-solid-svg-icons'
@@ -9,4 +13,13 @@ import { faExpand, faCompress, faChevronRight } from '@fortawesome/pro-solid-svg
 // duoTone
 // import { faBadgeDollar as faBadgeDollarDuo } from '@fortawesome/pro-duotone-svg-icons'
 
-library.add(faCalendar, faExpand, faCompress, faChevronRight)
+library.add(
+  // Regular
+  faCalendarReg,
+  faSignOutAltReg,
+  faUserReg,
+  // Solid
+  faExpand,
+  faCompress,
+  faChevronRight
+)
