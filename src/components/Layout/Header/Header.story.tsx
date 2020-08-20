@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 24px;
   background: #eee;
 `
-export const header = () => (
+export const component = () => (
   <Container>
     <Header />
   </Container>

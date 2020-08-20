@@ -5,6 +5,7 @@ import 'antd/dist/antd.css'
 import 'react-date-range/dist/styles.css' // main style file
 import 'react-date-range/dist/theme/default.css' // theme css file
 import '~/common/utils/iconLibrary'
+import '~/lib/translations'
 import Providers from '~/lib/Providers'
 
 const _App = ({ Component, pageProps }: AppProps) => {

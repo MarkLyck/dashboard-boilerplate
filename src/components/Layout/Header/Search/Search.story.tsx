@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled'
-import Search from './Search'
+import Search from './index'
 
 export default {
-  title: 'components/layout/header',
+  title: 'components/layout/header/search',
   component: Search,
 }
 
@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 24px;
   background: #eee;
 `
-export const header = () => (
+export const search = () => (
   <Container>
     <Search />
   </Container>

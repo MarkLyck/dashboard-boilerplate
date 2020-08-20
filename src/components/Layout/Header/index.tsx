@@ -1,8 +1,11 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout, Menu, Divider } from 'antd'
 import { Flex } from 'rebass'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import capitalize from '~/common/utils/capitalize'
 import styled from 'styled'
+import Search from './Search'
 import DateSelector from './DateSelector'
 
 const StyledHeader = styled(Layout.Header)`
@@ -33,25 +36,29 @@ const StyledMenu = styled(Menu)`
   }
 `
 
-const AppHeader = () => (
-  <StyledHeader>
-    <Logo />
-    <Flex alignItems="center">
-      <StyledMenu mode="horizontal">
-        <Menu.Item key="1">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <Link href="/admin">
-            <a>Admin</a>
-          </Link>
-        </Menu.Item>
-      </StyledMenu>
-      <DateSelector />
-    </Flex>
-  </StyledHeader>
-)
+const AppHeader = () => {
+  const { t } = useTranslation()
+  return (
+    <StyledHeader>
+      <Logo />
+      <Flex alignItems="center">
+        <StyledMenu mode="horizontal">
+          <Menu.Item key="1">
+            <Link href="/">
+              <a>{t('common.home').cap()}</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Link href="/admin">
+              <a>{t('common.admin').cap()}</a>
+            </Link>
+          </Menu.Item>
+        </StyledMenu>
+        <Search />
+        <DateSelector />
+      </Flex>
+    </StyledHeader>
+  )
+}
 
 export default AppHeader
