@@ -1,7 +1,8 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout } from 'antd'
 import styled from 'styled'
-
+import { ThemeProvider } from 'emotion-theming'
+import theme from '~/common/theme'
 import Header from './Header'
 
 const StyledLayout = styled(Layout)`
@@ -13,10 +14,12 @@ const StyledContent = styled(Layout.Content)`
 `
 
 const AppLayout = ({ children }) => (
-  <StyledLayout>
-    <Header />
-    <StyledContent>{children}</StyledContent>
-  </StyledLayout>
+  <ThemeProvider theme={theme}>
+    <StyledLayout>
+      <Header />
+      <StyledContent>{children}</StyledContent>
+    </StyledLayout>
+  </ThemeProvider>
 )
 
 export default AppLayout

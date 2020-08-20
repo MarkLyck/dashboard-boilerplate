@@ -2,13 +2,16 @@ import React from 'react'
 import { Layout, Menu } from 'antd'
 import Link from 'next/link'
 import styled from 'styled'
+import DateSelector from './DateSelector'
 
 const StyledHeader = styled(Layout.Header)`
-  background: white;
-  padding: 0 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  && {
+    background: white;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 const Logo = styled.div`
@@ -35,6 +38,7 @@ const AppHeader = () => (
         </Link>
       </Menu.Item>
     </Menu>
+    <DateSelector />
   </StyledHeader>
 )
 
