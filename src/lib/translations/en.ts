@@ -18,5 +18,9 @@ export default {
       last_30_days: 'last 30 days',
       last_month: 'last month',
     },
+    language: {
+      english: 'english',
+      french: 'french',
+    },
   },
 }

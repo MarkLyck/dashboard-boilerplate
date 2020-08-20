@@ -1,11 +1,12 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout, Menu, Space } from 'antd'
 import { Flex } from 'rebass'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled'
 import Search from './Search'
 import DateSelector from './DateSelector'
+import LanguageSelector from './LanguageSelector'
 import theme from '~/common/theme'
 
 const StyledHeader = styled(Layout.Header)`
@@ -52,8 +53,11 @@ const AppHeader = () => {
         </StyledMenu>
       </Flex>
       <Flex alignItems="center">
-        <Search />
-        <DateSelector />
+        <Space>
+          <Search />
+          <DateSelector />
+          <LanguageSelector />
+        </Space>
       </Flex>
     </StyledHeader>
   )

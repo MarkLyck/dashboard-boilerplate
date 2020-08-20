@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
 import { Select, Divider } from 'antd'
 import { Flex } from 'rebass'
+import styled from 'styled'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const { Option } = Select
 
+const StyledMultiSelect = styled(Select)`
+  .ant-select-selector {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+`
+
+// TODO replace with remote data.
 const mockData = [
   { value: 1, label: 'test' },
   { value: 2, label: 'site' },
@@ -35,7 +44,7 @@ const Search = () => {
   ))
 
   return (
-    <Flex alignItems="center" mr="16px">
+    <Flex alignItems="center">
       {/* select resource type for searching */}
       <Select defaultValue={t('common.site_plural')} style={{ width: 120 }} onChange={(value) => setResource(value)}>
         <Option value="site">{t('common.site_plural')}</Option>
@@ -43,12 +52,12 @@ const Search = () => {
       </Select>
       <Divider type="vertical" />
       {/* select sites or companies */}
-      <Select
+      <StyledMultiSelect
         showSearch
         mode="multiple"
         value={value}
         style={{ width: 200 }}
-        placeholder={t('common.search')}
+        placeholder={`${t('common.search')} ${t(`common.${resource}_plural`)}`}
         onChange={handleSelect}
         onSearch={handleSearch}
         notFoundContent={data.length === 0 ? undefined : null}
@@ -57,7 +66,7 @@ const Search = () => {
         suffixIcon={<FontAwesomeIcon icon={['far', 'calendar']} />}
       >
         {options}
-      </Select>
+      </StyledMultiSelect>
     </Flex>
   )
 }
