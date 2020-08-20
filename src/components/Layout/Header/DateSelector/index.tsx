@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled'
-import theme from '~/common/theme'
+import theme from '~/lib/theme'
 
 import { filterContext } from '~/common/contexts'
 import customLabelsDateRange from './customLabels'

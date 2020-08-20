@@ -3,7 +3,6 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 // custom decorators
 import withGlobalStyles from './decorators/withGlobalStyles'
-import withTheme from './decorators/withTheme'
 import withRouter from './decorators/withRouter'
 import withProviders from './decorators/withProviders'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
@@ -19,7 +18,6 @@ addParameters({
 
 // addDecorator(withWhyDidYouRender)
 addDecorator(withGlobalStyles)
-addDecorator(withTheme)
 addDecorator(withRouter)
 addDecorator(withProviders)
 

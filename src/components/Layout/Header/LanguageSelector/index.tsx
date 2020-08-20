@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 
 const LanguageSwitcher = () => {
   const { t, i18n } = useTranslation()
-  console.log('LanguageSwitcher -> i18n', i18n)
 
   const setLanguage = (language) => {
     i18n.changeLanguage(language.key)

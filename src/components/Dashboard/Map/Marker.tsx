@@ -69,12 +69,12 @@ const LabelTooltip = styled.span`
 const Container = styled.div`
   position: relative;
 
-  ${LabelTooltip} {
+  .marker-label-tooltip {
     display: ${(props: any) => (props.isSelected ? 'block' : 'none')};
   }
 
   &:hover {
-    ${LabelTooltip} {
+    .marker-label-tooltip {
       display: block;
       ${(props: any) => (props.isSelected ? 'animation: none;' : '')}
     }
@@ -91,7 +91,7 @@ const MarkerItem = ({ point, color, selectedId, setCenter, renderSite }) => {
 
   return (
     <Container isSelected={point.id === selectedId} key={point.id}>
-      {point.name ? <LabelTooltip>{point.name}</LabelTooltip> : null}
+      {point.name ? <LabelTooltip className="marker-label-tooltip">{point.name}</LabelTooltip> : null}
       <AnimatedMarkerItem onClick={handleSiteRender} color={color} />
     </Container>
   )

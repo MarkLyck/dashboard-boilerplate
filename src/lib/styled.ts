@@ -1,5 +1,5 @@
 import styled, { CreateStyled } from '@emotion/styled'
-import theme from '~/common/theme'
+import theme from '~/lib/theme'
 
 type Theme = typeof theme
 

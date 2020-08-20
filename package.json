@@ -30,6 +30,7 @@
     "rebass": "^4.0.7"
   },
   "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@storybook/addon-controls": "^6.0.13",
     "@storybook/addon-docs": "^6.0.13",
     "@storybook/addon-viewport": "^6.0.13",
@@ -39,6 +40,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd-dayjs-webpack-plugin": "^1.0.1",
+    "babel-plugin-emotion": "^10.0.33",
     "less-loader": "^6.2.0",
     "next-compose-plugins": "^2.2.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",

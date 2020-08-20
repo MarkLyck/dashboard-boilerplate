@@ -61,7 +61,35 @@ const ClusterMarker = (coordinates, _pointCount, getLeaves) => {
   )
 }
 
-const Map = ({ data = [], isLoading, error, fitBounds, onExpand, mapExpanded, colorMap, selectedId }) => {
+export interface MapType {
+  data: any[]
+  isLoading: boolean
+  error: any
+  fitBounds: any
+  onExpand: () => void
+  mapExpanded: boolean
+  colorMap: any
+  selectedId: string
+}
+
+const Map = ({
+  data = [
+    // {
+    //   id: '1',
+    //   label: 'label 1',
+    //   lat: 5,
+    //   lon: 5,
+    //   state: 1,
+    // },
+  ],
+  isLoading,
+  error,
+  fitBounds,
+  onExpand,
+  mapExpanded,
+  colorMap = () => DEFAULT_COLOR,
+  selectedId,
+}: MapType) => {
   const [zoom] = useState([2])
   const [center, setCenter] = useState(
     hasStorage && localStorage.mapCenter ? JSON.parse(localStorage.mapCenter) : [-106.3468, 56.1304]

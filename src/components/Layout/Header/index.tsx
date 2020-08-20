@@ -8,7 +8,7 @@ import Search from './Search'
 import DateSelector from './DateSelector'
 import LanguageSelector from './LanguageSelector'
 import UserMenu from './UserMenu'
-import theme from '~/common/theme'
+import theme from '~/lib/theme'
 
 const StyledHeader = styled(Layout.Header)`
   && {
