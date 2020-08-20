@@ -3,7 +3,10 @@ const theme: any = {
     primary: '#0066E8',
     secondary: '#00DA8E',
     lightText: '#A0A0B9',
-    text: 'rgba(0, 0, 0, 0.65)',
+    text: {
+      main: 'rgba(0, 0, 0, 0.65)',
+      inactive: '#849095',
+    },
     title: '#312E5E',
     action: {
       active: '#0066E8',
@@ -13,7 +16,7 @@ const theme: any = {
     },
     border: '#ebedf5',
     background: {
-      dashboard: '#F9F9FC',
+      primary: '#F9F9FC',
     },
     table: {
       hoverColor: '#f9fafb',

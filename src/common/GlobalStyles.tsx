@@ -6,6 +6,12 @@ export const globalStyles = css`
   #root {
     height: 100%;
   }
+
+  .ant-btn {
+    > svg {
+      margin-right: 8px;
+    }
+  }
 `
 
 const GlobalStyles = () => <Global styles={globalStyles} />

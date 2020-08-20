@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
+import { Flex } from 'rebass'
 import Link from 'next/link'
 import styled from 'styled'
 import DateSelector from './DateSelector'
@@ -8,10 +9,13 @@ const StyledHeader = styled(Layout.Header)`
   && {
     background: white;
     padding: 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    line-height: inherit;
   }
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 `
 
 const Logo = styled.div`
@@ -23,22 +27,30 @@ const Logo = styled.div`
   width: 200px;
 `
 
+const StyledMenu = styled(Menu)`
+  && {
+    line-height: 64px;
+  }
+`
+
 const AppHeader = () => (
   <StyledHeader>
     <Logo />
-    <Menu mode="horizontal">
-      <Menu.Item key="1">
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link href="/admin">
-          <a>Admin</a>
-        </Link>
-      </Menu.Item>
-    </Menu>
-    <DateSelector />
+    <Flex alignItems="center">
+      <StyledMenu mode="horizontal">
+        <Menu.Item key="1">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="2">
+          <Link href="/admin">
+            <a>Admin</a>
+          </Link>
+        </Menu.Item>
+      </StyledMenu>
+      <DateSelector />
+    </Flex>
   </StyledHeader>
 )
 
