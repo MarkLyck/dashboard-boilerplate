@@ -1,12 +1,12 @@
 import React from 'react'
-import { Layout, Menu, Divider } from 'antd'
+import { Layout, Menu } from 'antd'
 import { Flex } from 'rebass'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import capitalize from '~/common/utils/capitalize'
 import styled from 'styled'
 import Search from './Search'
 import DateSelector from './DateSelector'
+import theme from '~/common/theme'
 
 const StyledHeader = styled(Layout.Header)`
   && {
@@ -21,13 +21,9 @@ const StyledHeader = styled(Layout.Header)`
   position: relative;
 `
 
-const Logo = styled.div`
-  background-image: url('https://weeklystocktip.com/static/icons/logo_horizontal_color.svg');
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
+const Logo = styled.img`
   height: 32px;
-  width: 200px;
+  width: auto;
 `
 
 const StyledMenu = styled(Menu)`
@@ -40,8 +36,8 @@ const AppHeader = () => {
   const { t } = useTranslation()
   return (
     <StyledHeader>
-      <Logo />
       <Flex alignItems="center">
+        <Logo src={theme.logos.horizontal} />
         <StyledMenu mode="horizontal">
           <Menu.Item key="1">
             <Link href="/">
@@ -54,6 +50,8 @@ const AppHeader = () => {
             </Link>
           </Menu.Item>
         </StyledMenu>
+      </Flex>
+      <Flex alignItems="center">
         <Search />
         <DateSelector />
       </Flex>

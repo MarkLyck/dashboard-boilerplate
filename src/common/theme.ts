@@ -34,6 +34,9 @@ const theme: any = {
       perfect: '#00DA8E',
     },
   },
+  logos: {
+    horizontal: 'https://weeklystocktip.com/static/icons/logo_horizontal_color.svg',
+  },
 }
 
 export default theme
