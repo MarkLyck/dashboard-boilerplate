@@ -10,7 +10,7 @@ const StyledLayout = styled(Layout)`
 `
 
 const StyledContent = styled(Layout.Content)`
-  padding: 32px;
+  padding: 24px;
 `
 
 const AppLayout = ({ children }) => (

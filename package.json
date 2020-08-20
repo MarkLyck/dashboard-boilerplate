@@ -25,7 +25,6 @@
     "rebass": "^4.0.7"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^6.0.13",
     "@storybook/addon-controls": "^6.0.13",
     "@storybook/addon-docs": "^6.0.13",
     "@storybook/addon-viewport": "^6.0.13",

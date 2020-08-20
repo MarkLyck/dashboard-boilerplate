@@ -19,8 +19,6 @@ const MapBox = ReactMapboxGl({
 
 const Container = styled(Box)`
   height: 100%;
-  max-height: 500px;
-  width: 100%;
   padding: 0;
   position: relative;
 `

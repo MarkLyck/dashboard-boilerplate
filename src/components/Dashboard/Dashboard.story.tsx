@@ -6,4 +6,8 @@ export default {
   component: Dashboard,
 }
 
-export const dashboard = () => <Dashboard />
+export const dashboard = (props) => (
+  <>
+    <Dashboard {...props} />
+  </>
+)
