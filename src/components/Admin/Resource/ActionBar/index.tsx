@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next'
 import Filter from './Filter'
 
 const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
-  console.log('ActionBar -> resource', resource)
   const { t } = useTranslation()
 
   return (

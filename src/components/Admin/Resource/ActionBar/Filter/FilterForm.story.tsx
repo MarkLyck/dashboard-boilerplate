@@ -10,7 +10,7 @@ export const filterForm = (args: any) => <FilterForm {...args} />
 
 filterForm.args = {
   onSubmit: console.log,
-  columns: [
+  resourceFields: [
     'id',
     'name',
     'active',

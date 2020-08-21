@@ -9,7 +9,10 @@ export default {
 export const actionBar = (args: any) => <ActionBar {...args} />
 
 actionBar.args = {
-  resource: 'site',
+  resource: {
+    name: 'site',
+    fields: ['field 1', 'field 2'],
+  },
   selectedRows: [1, 2],
   onDelete: () => {},
 }

@@ -18,12 +18,14 @@ const Resource = ({ propResource }) => {
 
   const resource = resourceMap[resourceName]
 
+  if (!resource) return <NotFound />
+
   const List = resource.List
 
   return (
     <StyledSpace>
       <Navigation resource={resource} />
-      {List ? <List resource={resource} /> : <NotFound />}
+      <List resource={resource} />
     </StyledSpace>
   )
 }
