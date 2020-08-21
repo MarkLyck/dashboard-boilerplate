@@ -48,7 +48,9 @@ const Search = () => {
       // Fetch new data with empty searchTerm
       setData(mockData)
     } else {
-      message.warning(t(`warning.max_items_selected`, { items: t(`resource.${resource}_plural`), count: MAX_ITEMS }))
+      message.warning(
+        t(`message.warning.max_items_selected`, { items: t(`resource.${resource}_plural`), count: MAX_ITEMS })
+      )
     }
   }
 
@@ -74,7 +76,7 @@ const Search = () => {
         maxTagTextLength={4}
         value={value}
         style={{ width: 210 }}
-        placeholder={`${t('common.search')} ${t(`resource.${resource}_plural`)}`}
+        placeholder={`${t('action.search')} ${t(`resource.${resource}_plural`)}`}
         onChange={handleSelect}
         onSearch={handleSearch}
         notFoundContent={data.length === 0 ? undefined : null}

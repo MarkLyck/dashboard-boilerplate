@@ -3,6 +3,7 @@ import { Button, Popconfirm, Space } from 'antd'
 import { Flex } from 'rebass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
+import Filter from './Filter'
 
 const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
   const { t } = useTranslation()
@@ -10,8 +11,9 @@ const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
   return (
     <Flex alignItems="center" justifyContent="flex-end" mb="8px">
       <Space>
+        <Filter />
         <Popconfirm
-          title={t('warning.are_you_sure_you_want_to_delete_count_items', {
+          title={t('message.warning.are_you_sure_you_want_to_delete_count_items', {
             count: selectedRows.length,
             items: t(`resource.${resource}${selectedRows.length > 1 ? '_plural' : ''}`),
           })}

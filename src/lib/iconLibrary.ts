@@ -8,6 +8,8 @@ import {
   faEdit as faEditReg,
   faTrash as faTrashReg,
   faPlus as faPlusReg,
+  faMinus as faMinusReg,
+  faFilter as faFilterReg,
 } from '@fortawesome/pro-regular-svg-icons'
 
 // Solid
@@ -23,6 +25,7 @@ import {
   faServer as faServerDuo,
   faShieldVirus as faShieldVirusDuo,
   faWifi as faWifiDuo,
+  faMinusCircle as faMinusCircleDuo,
 } from '@fortawesome/pro-duotone-svg-icons'
 
 library.add(
@@ -33,6 +36,8 @@ library.add(
   faEditReg,
   faTrashReg,
   faPlusReg,
+  faMinusReg,
+  faFilterReg,
   // Solid
   faExpand,
   faCompress,
@@ -46,5 +51,6 @@ library.add(
   faMonitorHeartRateDuo,
   faServerDuo,
   faShieldVirusDuo,
-  faWifiDuo
+  faWifiDuo,
+  faMinusCircleDuo
 )

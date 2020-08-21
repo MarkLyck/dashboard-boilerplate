@@ -16,7 +16,7 @@ const NotFound = () => {
 
   return (
     <Container>
-      <Empty description={t('warning.resource_not_found')} />
+      <Empty description={t('message.warning.resource_not_found')} />
     </Container>
   )
 }
