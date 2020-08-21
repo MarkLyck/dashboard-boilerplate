@@ -2,38 +2,24 @@ import React, { useState } from 'react'
 import styled from 'styled'
 import { Table, Space } from 'antd'
 import generateColumns from '~/components/Admin/Resource/utils/generateColumns'
-import data from './mock'
 import ActionBar from '~/components/Admin/Resource/ActionBar'
+
+import data from '../Site/mock'
 
 const StyledSpace = styled(Space)`
   width: 100%;
 `
 
-const TableComponent = ({ resource }) => {
+const TableComponent = ({ resource, fields, rowKey = 'id' }) => {
+  console.log('TableComponent -> resource', resource)
+  console.log('TableComponent -> fields', fields)
   const [selectedRows, setSelectedRows] = useState([])
 
   const onCreate = () => console.log('onCreate')
   const onEdit = () => console.log('onEdit')
   const onDelete = () => console.log('delete')
 
-  const columns = generateColumns(
-    [
-      'id',
-      'name',
-      'active',
-      'company_id',
-      'uid',
-      'captive_portal_id',
-      // 'address_line_1',
-      // 'address_line_2',
-      // 'province_or_state',
-      // 'city',
-      // 'country',
-      // 'lat',
-      // 'lon',
-    ],
-    onEdit
-  )
+  const columns = generateColumns(fields, onEdit)
 
   const handleTableChange = (pagination, filters, sorter) => {
     console.log('handleTableChange -> sorter', sorter)
@@ -50,7 +36,7 @@ const TableComponent = ({ resource }) => {
         dataSource={data}
         size="middle"
         onChange={handleTableChange}
-        rowKey="id"
+        rowKey={rowKey}
         rowSelection={{
           type: 'checkbox',
           onChange: (selectedRowKeys) => setSelectedRows(selectedRowKeys),

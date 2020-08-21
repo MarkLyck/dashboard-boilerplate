@@ -2,17 +2,18 @@ import React, { useState } from 'react'
 import { Button, Popover, Form, Input } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import FilterForm from './FilterForm'
 
-const Filter = ({ onFilter, columns }) => {
+const Filter = ({ onSubmit, columns }) => {
   const [filterVisible, setFilterVisible] = useState(false)
   const { t } = useTranslation()
 
   return (
-    <div>
+    <>
       <Popover
         placement="bottomRight"
-        content={<FilterForm onSubmit={console.log} />}
+        content={<FilterForm onSubmit={onSubmit} columns={columns} />}
         title="Filter"
         trigger="click"
         visible={filterVisible}
@@ -20,7 +21,7 @@ const Filter = ({ onFilter, columns }) => {
       >
         <Button icon={<FontAwesomeIcon icon={['far', 'filter']} />}>{t('action.filter').cap()}</Button>
       </Popover>
-    </div>
+    </>
   )
 }
 

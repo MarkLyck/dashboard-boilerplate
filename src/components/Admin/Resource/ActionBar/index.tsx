@@ -11,7 +11,7 @@ const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
   return (
     <Flex alignItems="center" justifyContent="flex-end" mb="8px">
       <Space>
-        <Filter />
+        <Filter onSubmit={console.log} columns={[]} />
         <Popconfirm
           title={t('message.warning.are_you_sure_you_want_to_delete_count_items', {
             count: selectedRows.length,

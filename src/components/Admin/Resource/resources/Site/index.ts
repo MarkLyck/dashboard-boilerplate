@@ -1,0 +1,15 @@
+export const fields = [
+  'id',
+  'name',
+  'active',
+  'company_id',
+  'uid',
+  'captive_portal_id',
+  // 'address_line_1',
+  // 'address_line_2',
+  // 'province_or_state',
+  // 'city',
+  // 'country',
+  // 'lat',
+  // 'lon',
+]

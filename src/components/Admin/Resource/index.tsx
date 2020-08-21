@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled'
 
 import { useRouter } from 'next/router'
-import { ResourceMap } from './resources'
+import { resourceMap } from './resources'
 import Navigation from './Navigation'
 import NotFound from './NotFound'
 
@@ -16,12 +16,12 @@ const Resource = ({ propResource }) => {
   const router = useRouter()
   const resource = router ? router.query.resource : propResource
 
-  const ResourceComponent = ResourceMap[propResource ? propResource : String(resource)]
+  const List = resourceMap[resource].List
 
   return (
     <StyledSpace>
       <Navigation resource={resource} />
-      {ResourceComponent ? <ResourceComponent resource={resource} /> : <NotFound />}
+      {List ? <List resource={resource} fields={resourceMap[resource].fields} /> : <NotFound />}
     </StyledSpace>
   )
 }
