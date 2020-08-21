@@ -9,11 +9,16 @@ const Filter = ({ onSubmit, resourceFields }) => {
   const [filterVisible, setFilterVisible] = useState(false)
   const { t } = useTranslation()
 
+  const handleSubmit = (filters) => {
+    setFilterVisible(false)
+    onSubmit(filters)
+  }
+
   return (
     <>
       <Popover
         placement="bottomRight"
-        content={<FilterForm onSubmit={onSubmit} resourceFields={resourceFields} />}
+        content={<FilterForm onSubmit={handleSubmit} resourceFields={resourceFields} />}
         title="Filter"
         trigger="click"
         visible={filterVisible}
