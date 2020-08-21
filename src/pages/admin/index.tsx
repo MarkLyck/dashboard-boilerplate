@@ -1,7 +1,7 @@
-import React from 'react'
+import Resource from '~/components/Admin/Resource'
 
 const Admin = () => {
-  return <div>Admin</div>
+  return <Resource propResource="site" />
 }
 
 export default Admin

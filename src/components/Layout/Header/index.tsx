@@ -41,7 +41,7 @@ const AppHeader = () => {
               </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link href="/admin">
+              <Link href="/admin/[resource]" as="/admin/site">
                 <a>{t('navigation.admin').cap()}</a>
               </Link>
             </Menu.Item>

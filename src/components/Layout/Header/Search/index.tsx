@@ -48,7 +48,7 @@ const Search = () => {
       // Fetch new data with empty searchTerm
       setData(mockData)
     } else {
-      message.warning(t(`warning.max_items_selected`, { items: t(`common.${resource}_plural`), count: MAX_ITEMS }))
+      message.warning(t(`warning.max_items_selected`, { items: t(`resource.${resource}_plural`), count: MAX_ITEMS }))
     }
   }
 
@@ -61,9 +61,9 @@ const Search = () => {
   return (
     <Flex alignItems="center">
       {/* select resource type for searching */}
-      <Select defaultValue={t('common.site_plural')} style={{ width: 120 }} onChange={(value) => setResource(value)}>
-        <Option value="site">{t('common.site_plural')}</Option>
-        <Option value="company">{t('common.company_plural')}</Option>
+      <Select defaultValue={t('resource.site_plural')} style={{ width: 120 }} onChange={(value) => setResource(value)}>
+        <Option value="site">{t('resource.site_plural')}</Option>
+        <Option value="company">{t('resource.company_plural')}</Option>
       </Select>
       <Divider type="vertical" />
       {/* select sites or companies */}
@@ -74,7 +74,7 @@ const Search = () => {
         maxTagTextLength={4}
         value={value}
         style={{ width: 210 }}
-        placeholder={`${t('common.search')} ${t(`common.${resource}_plural`)}`}
+        placeholder={`${t('common.search')} ${t(`resource.${resource}_plural`)}`}
         onChange={handleSelect}
         onSearch={handleSearch}
         notFoundContent={data.length === 0 ? undefined : null}

@@ -7,13 +7,14 @@ import {
   faUser as faUserReg,
   faEdit as faEditReg,
   faTrash as faTrashReg,
+  faPlus as faPlusReg,
 } from '@fortawesome/pro-regular-svg-icons'
 
 // Solid
 import { faExpand, faCompress, faChevronRight, faSpinnerThird } from '@fortawesome/pro-solid-svg-icons'
 
 // duoTone
-// import { faSpinnerThird as faSpinnerThirdDuo } from '@fortawesome/pro-duotone-svg-icons'
+import { faMapPin as faMapPinDuo, faBuilding as faBuildingDuo } from '@fortawesome/pro-duotone-svg-icons'
 
 library.add(
   // Regular
@@ -22,10 +23,13 @@ library.add(
   faUserReg,
   faEditReg,
   faTrashReg,
+  faPlusReg,
   // Solid
   faExpand,
   faCompress,
   faChevronRight,
-  faSpinnerThird
+  faSpinnerThird,
   // Duo
+  faMapPinDuo,
+  faBuildingDuo
 )
