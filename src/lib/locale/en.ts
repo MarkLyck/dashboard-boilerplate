@@ -1,13 +1,23 @@
 export default {
   translation: {
     common: {
+      search: 'search',
+    },
+    resource: {
       site: 'site',
       site_plural: 'sites',
       company: 'company',
       company_plural: 'companies',
-      search: 'search',
+    },
+    navigation: {
       home: 'home',
       admin: 'admin',
+    },
+    action: {
+      edit: 'edit',
+      delete: 'delete',
+      create: 'create',
+      cancel: 'cancel',
     },
     time: {
       today: 'today',
@@ -28,6 +38,7 @@ export default {
     },
     warning: {
       max_items_selected: 'You cannot select more than {{count}} {{items}}',
+      are_you_sure_you_want_to_delete_count_items: 'Are you sure you want to delete {{count}} {{items}}?',
     },
   },
 }

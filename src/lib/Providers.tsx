@@ -9,8 +9,8 @@ import theme from '~/lib/theme'
 import '~/common/prototypes/capitalize'
 
 // antd internationalization
-import enUS from './translations/antd/en_US'
-import frFR from './translations/antd/fr_FR'
+import enUS from '~/lib/locale/antd/en_US'
+import frFR from '~/lib/locale/antd/fr_FR'
 
 // creates a "superProvider" to avoid "WrapperHell"
 const composeWrappers = (wrappers: React.FunctionComponent[]): React.FunctionComponent =>

@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import styled from 'styled'
 import { Table, Space } from 'antd'
 import generateColumns from '~/components/Admin/Resource/utils/generateColumns'
 import data from './mock'
 import ActionBar from '~/components/Admin/Resource/ActionBar'
 
-const TableComponent = () => {
+const StyledSpace = styled(Space)`
+  width: 100%;
+`
+
+const TableComponent = ({ resource }) => {
+  const [selectedRows, setSelectedRows] = useState([])
   const onEdit = () => console.log('onEdit')
   const onDelete = () => console.log('delete')
 
@@ -35,8 +41,8 @@ const TableComponent = () => {
   }
 
   return (
-    <Space direction="vertical">
-      <ActionBar onDelete={onDelete} />
+    <StyledSpace direction="vertical">
+      <ActionBar resource={resource} onDelete={onDelete} selectedRows={selectedRows} />
       <Table
         columns={columns}
         dataSource={data}
@@ -45,10 +51,10 @@ const TableComponent = () => {
         rowKey="id"
         rowSelection={{
           type: 'checkbox',
-          onChange: (selectedRowKeys, _selectedRows) => console.log(`selectedRowKeys: ${selectedRowKeys}`),
+          onChange: (selectedRowKeys) => setSelectedRows(selectedRowKeys),
         }}
       />
-    </Space>
+    </StyledSpace>
   )
 }
 

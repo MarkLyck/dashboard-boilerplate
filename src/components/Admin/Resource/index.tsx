@@ -1,7 +1,12 @@
 import React from 'react'
+import styled from 'styled'
 import { Space } from 'antd'
 import { useRouter } from 'next/router'
 import { Resources } from './resources'
+
+const StyledSpace = styled(Space)`
+  width: 100%;
+`
 
 const Resource = ({ propResource }) => {
   const router = useRouter()
@@ -11,9 +16,9 @@ const Resource = ({ propResource }) => {
   if (!ResourceComponent) return <div>resource not found</div>
 
   return (
-    <Space direction="vertical">
+    <StyledSpace direction="vertical">
       <ResourceComponent />
-    </Space>
+    </StyledSpace>
   )
 }
 

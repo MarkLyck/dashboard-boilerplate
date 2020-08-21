@@ -12,6 +12,7 @@ const StyledLayout = styled(Layout)`
 
 const StyledContent = styled(Layout.Content)`
   padding: 24px;
+  overflow-x: scroll;
 `
 
 const AppLayout = ({ children }) => {

@@ -37,12 +37,12 @@ const AppHeader = () => {
           <Menu mode="horizontal">
             <Menu.Item key="1">
               <Link href="/">
-                <a>{t('common.home').cap()}</a>
+                <a>{t('navigation.home').cap()}</a>
               </Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Link href="/admin">
-                <a>{t('common.admin').cap()}</a>
+                <a>{t('navigation.admin').cap()}</a>
               </Link>
             </Menu.Item>
           </Menu>

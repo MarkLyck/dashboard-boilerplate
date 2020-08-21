@@ -12,6 +12,10 @@ export const globalStyles = css`
       margin-right: 8px;
     }
   }
+
+  .ant-table-cell {
+    white-space: nowrap;
+  }
 `
 
 const GlobalStyles = () => <Global styles={globalStyles} />
