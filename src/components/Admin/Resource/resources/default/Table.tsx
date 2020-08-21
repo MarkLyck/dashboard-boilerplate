@@ -10,16 +10,14 @@ const StyledSpace = styled(Space)`
   width: 100%;
 `
 
-const TableComponent = ({ resource, fields, rowKey = 'id' }) => {
-  console.log('TableComponent -> resource', resource)
-  console.log('TableComponent -> fields', fields)
+const TableComponent = ({ resource, rowKey = 'id' }) => {
   const [selectedRows, setSelectedRows] = useState([])
 
   const onCreate = () => console.log('onCreate')
   const onEdit = () => console.log('onEdit')
   const onDelete = () => console.log('delete')
 
-  const columns = generateColumns(fields, onEdit)
+  const columns = generateColumns(resource.fields, onEdit)
 
   const handleTableChange = (pagination, filters, sorter) => {
     console.log('handleTableChange -> sorter', sorter)

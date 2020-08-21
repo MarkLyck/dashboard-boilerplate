@@ -26,7 +26,7 @@ const Navigation = ({ resource }) => {
 
   return (
     <Container>
-      <StyledMenu defaultSelectedKeys={[resource]}>
+      <StyledMenu defaultSelectedKeys={[resource.name]}>
         {resources.map((resource) => (
           <MenuItem key={resource.name} icon={<resource.Icon />}>
             <Link href={`/admin/[resource]`} as={`/admin/${resource.name}`}>

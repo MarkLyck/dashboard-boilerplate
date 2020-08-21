@@ -6,16 +6,17 @@ import { useTranslation } from 'react-i18next'
 import Filter from './Filter'
 
 const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
+  console.log('ActionBar -> resource', resource)
   const { t } = useTranslation()
 
   return (
     <Flex alignItems="center" justifyContent="flex-end" mb="8px">
       <Space>
-        <Filter onSubmit={console.log} columns={[]} />
+        <Filter onSubmit={console.log} resourceFields={resource.fields} />
         <Popconfirm
           title={t('message.warning.are_you_sure_you_want_to_delete_count_items', {
             count: selectedRows.length,
-            items: t(`resource.${resource}${selectedRows.length > 1 ? '_plural' : ''}`),
+            items: t(`resource.${resource.name}${selectedRows.length > 1 ? '_plural' : ''}`),
           })}
           disabled={!selectedRows.length}
           onConfirm={onDelete}

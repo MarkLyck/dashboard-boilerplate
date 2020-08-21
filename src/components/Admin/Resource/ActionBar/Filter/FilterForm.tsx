@@ -22,7 +22,7 @@ const RemoveButton = styled(Button)`
   }
 `
 
-const FilterForm = ({ columns, onSubmit }) => {
+const FilterForm = ({ resourceFields, onSubmit }) => {
   const [filters, setFilters] = useState([])
   const { t } = useTranslation()
 
@@ -51,7 +51,11 @@ const FilterForm = ({ columns, onSubmit }) => {
           <>
             {fields.map((field, i) => (
               <FormListContainer key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="start">
-                <FilterBy field={field} columns={columns} onChange={(value) => handleFilterByChange(value, i)} />
+                <FilterBy
+                  field={field}
+                  resourceFields={resourceFields}
+                  onChange={(value: string) => handleFilterByChange(value, i)}
+                />
                 {filters[i] && (
                   <FilterOperation field={field} onChange={(value: string) => handleFilterOperationChange(value, i)} />
                 )}

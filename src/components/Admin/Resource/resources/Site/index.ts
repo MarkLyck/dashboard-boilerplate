@@ -1,7 +1,7 @@
 export const fields = [
   'id',
   'name',
-  'active',
+  { name: 'active', type: 'boolean' },
   'company_id',
   'uid',
   'captive_portal_id',

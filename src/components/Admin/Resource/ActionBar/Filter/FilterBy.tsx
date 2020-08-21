@@ -4,14 +4,15 @@ import { useTranslation } from 'react-i18next'
 import { underscoreCaseToWord } from '~/common/utils/toWord'
 const { Option } = Select
 
-const FilterBy = ({ field, columns, onChange }) => {
+const FilterBy = ({ field, resourceFields = [], onChange }) => {
   const { t } = useTranslation()
 
-  const filterByOptions = columns.map((column) => {
-    const name = typeof column === 'string' ? column : column.name
+  const filterByOptions = resourceFields.map((resourceField) => {
+    const fieldName = typeof resourceField === 'string' ? resourceField : resourceField.name
+
     return (
-      <Option key={name} value={name}>
-        {underscoreCaseToWord(name)}
+      <Option key={fieldName} value={fieldName}>
+        {underscoreCaseToWord(fieldName)}
       </Option>
     )
   })

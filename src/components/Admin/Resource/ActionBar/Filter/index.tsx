@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Button, Popover, Form, Input } from 'antd'
+import { Button, Popover } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import FilterForm from './FilterForm'
 
-const Filter = ({ onSubmit, columns }) => {
+const Filter = ({ onSubmit, resourceFields }) => {
   const [filterVisible, setFilterVisible] = useState(false)
   const { t } = useTranslation()
 
@@ -13,7 +13,7 @@ const Filter = ({ onSubmit, columns }) => {
     <>
       <Popover
         placement="bottomRight"
-        content={<FilterForm onSubmit={onSubmit} columns={columns} />}
+        content={<FilterForm onSubmit={onSubmit} resourceFields={resourceFields} />}
         title="Filter"
         trigger="click"
         visible={filterVisible}

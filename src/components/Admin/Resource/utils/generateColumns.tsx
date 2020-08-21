@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const generateColumns = (columns: any[], onEdit: () => void) => {
   const antColumns: any[] = columns.map((column) => {
-    const columnKey = typeof column === 'string' ? column : column.key
+    const columnName = typeof column === 'string' ? column : column.name
 
     return {
-      title: underscoreCaseToWord(columnKey),
-      dataIndex: columnKey,
-      key: columnKey,
+      title: underscoreCaseToWord(columnName),
+      dataIndex: columnName,
+      key: columnName,
       sorter: true,
     }
   })

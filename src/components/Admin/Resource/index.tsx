@@ -14,14 +14,16 @@ const StyledSpace = styled.div`
 
 const Resource = ({ propResource }) => {
   const router = useRouter()
-  const resource = router ? router.query.resource : propResource
+  const resourceName = router ? router.query.resource : propResource
 
-  const List = resourceMap[resource].List
+  const resource = resourceMap[resourceName]
+
+  const List = resource.List
 
   return (
     <StyledSpace>
       <Navigation resource={resource} />
-      {List ? <List resource={resource} fields={resourceMap[resource].fields} /> : <NotFound />}
+      {List ? <List resource={resource} /> : <NotFound />}
     </StyledSpace>
   )
 }
