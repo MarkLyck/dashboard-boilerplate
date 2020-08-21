@@ -14,7 +14,16 @@ import {
 import { faExpand, faCompress, faChevronRight, faSpinnerThird } from '@fortawesome/pro-solid-svg-icons'
 
 // duoTone
-import { faMapPin as faMapPinDuo, faBuilding as faBuildingDuo } from '@fortawesome/pro-duotone-svg-icons'
+import {
+  faMapMarkedAlt as faMapMarkedAltDuo,
+  faBuilding as faBuildingDuo,
+  faBrowser as faBrowserDuo,
+  faRouter as faRouterDuo,
+  faMonitorHeartRate as faMonitorHeartRateDuo,
+  faServer as faServerDuo,
+  faShieldVirus as faShieldVirusDuo,
+  faWifi as faWifiDuo,
+} from '@fortawesome/pro-duotone-svg-icons'
 
 library.add(
   // Regular
@@ -30,6 +39,12 @@ library.add(
   faChevronRight,
   faSpinnerThird,
   // Duo
-  faMapPinDuo,
-  faBuildingDuo
+  faMapMarkedAltDuo,
+  faBuildingDuo,
+  faBrowserDuo,
+  faRouterDuo,
+  faMonitorHeartRateDuo,
+  faServerDuo,
+  faShieldVirusDuo,
+  faWifiDuo
 )

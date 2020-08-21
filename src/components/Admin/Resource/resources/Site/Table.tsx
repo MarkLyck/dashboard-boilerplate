@@ -11,6 +11,8 @@ const StyledSpace = styled(Space)`
 
 const TableComponent = ({ resource }) => {
   const [selectedRows, setSelectedRows] = useState([])
+
+  const onCreate = () => console.log('onCreate')
   const onEdit = () => console.log('onEdit')
   const onDelete = () => console.log('delete')
 
@@ -22,13 +24,13 @@ const TableComponent = ({ resource }) => {
       'company_id',
       'uid',
       'captive_portal_id',
-      'address_line_1',
-      'address_line_2',
-      'province_or_state',
-      'city',
-      'country',
-      'lat',
-      'lon',
+      // 'address_line_1',
+      // 'address_line_2',
+      // 'province_or_state',
+      // 'city',
+      // 'country',
+      // 'lat',
+      // 'lon',
     ],
     onEdit
   )
@@ -42,7 +44,7 @@ const TableComponent = ({ resource }) => {
 
   return (
     <StyledSpace direction="vertical">
-      <ActionBar resource={resource} onDelete={onDelete} selectedRows={selectedRows} />
+      <ActionBar resource={resource} onCreate={onCreate} onDelete={onDelete} selectedRows={selectedRows} />
       <Table
         columns={columns}
         dataSource={data}

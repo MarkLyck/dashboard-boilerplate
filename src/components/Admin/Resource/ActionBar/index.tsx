@@ -8,7 +8,7 @@ const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
   const { t } = useTranslation()
 
   return (
-    <Flex alignItems="center" justifyContent="flex-end">
+    <Flex alignItems="center" justifyContent="flex-end" mb="8px">
       <Space>
         <Popconfirm
           title={t('warning.are_you_sure_you_want_to_delete_count_items', {
@@ -28,11 +28,11 @@ const ActionBar = ({ resource, onCreate, onDelete, selectedRows }) => {
             type="primary"
             icon={<FontAwesomeIcon icon={['far', 'trash']} />}
           >
-            Delete
+            {t('action.delete').cap()}
           </Button>
         </Popconfirm>
         <Button onClick={onCreate} icon={<FontAwesomeIcon icon={['far', 'plus']} />}>
-          Create
+          {t('action.create').cap()}
         </Button>
       </Space>
     </Flex>

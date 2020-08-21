@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled'
+
 import { useRouter } from 'next/router'
 import { ResourceMap } from './resources'
 import Navigation from './Navigation'
+import NotFound from './NotFound'
 
 const StyledSpace = styled.div`
   display: flex;
   width: 100%;
+  height: 100%;
 `
 
 const Resource = ({ propResource }) => {
@@ -17,8 +20,8 @@ const Resource = ({ propResource }) => {
 
   return (
     <StyledSpace>
-      <Navigation />
-      {ResourceComponent ? <ResourceComponent resource={resource} /> : <div>resource not found</div>}
+      <Navigation resource={resource} />
+      {ResourceComponent ? <ResourceComponent resource={resource} /> : <NotFound />}
     </StyledSpace>
   )
 }

@@ -8,7 +8,11 @@ import { resources } from '../resources'
 
 const Container = styled.div`
   margin-right: 32px;
-  margin-top: 40px;
+  margin-top: 48px;
+`
+
+const StyledMenu = styled(Menu)`
+  width: 160px;
 `
 
 const MenuItem = styled(Menu.Item)`
@@ -17,17 +21,12 @@ const MenuItem = styled(Menu.Item)`
   }
 `
 
-const Navigation = () => {
-  const [current, setCurrent] = useState('site')
+const Navigation = ({ resource }) => {
   const { t } = useTranslation()
-
-  const handleClick = ({ key }) => {
-    setCurrent(key)
-  }
 
   return (
     <Container>
-      <Menu defaultSelectedKeys={[current]} onClick={handleClick}>
+      <StyledMenu defaultSelectedKeys={[resource]}>
         {resources.map((resource) => (
           <MenuItem key={resource.name} icon={<FontAwesomeIcon icon={resource.icon} />}>
             <Link href={`/admin/[resource]`} as={`/admin/${resource.name}`}>
@@ -35,7 +34,7 @@ const Navigation = () => {
             </Link>
           </MenuItem>
         ))}
-      </Menu>
+      </StyledMenu>
     </Container>
   )
 }
