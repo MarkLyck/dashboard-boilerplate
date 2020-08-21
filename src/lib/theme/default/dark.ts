@@ -1,6 +1,7 @@
 const theme: any = {
+  name: 'defaultDark',
   colors: {
-    primary: '#0066E8',
+    primary: 'red',
     secondary: '#00DA8E',
     lightText: '#A0A0B9',
     text: {
@@ -16,7 +17,8 @@ const theme: any = {
     },
     border: '#ebedf5',
     background: {
-      primary: '#F9F9FC',
+      appBar: 'black',
+      primary: 'green',
     },
     table: {
       hoverColor: '#f9fafb',
@@ -35,7 +37,7 @@ const theme: any = {
     },
   },
   logos: {
-    horizontal: 'https://weeklystocktip.com/static/icons/logo_horizontal_color.svg',
+    horizontal: '',
   },
 }
 

@@ -26,5 +26,8 @@ export default {
       user: 'user',
       logout: 'logout',
     },
+    warning: {
+      max_items_selected: 'You cannot select more than {{count}} {{items}}',
+    },
   },
 }

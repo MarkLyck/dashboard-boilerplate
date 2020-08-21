@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Text = styled.span`
 const MapLoading = () => {
   return (
     <Container>
-      {/* <CircularProgress size={15} /> */}
+      <FontAwesomeIcon icon={['fas', 'spinner-third']} spin />
       <Text>Loading</Text>
     </Container>
   )

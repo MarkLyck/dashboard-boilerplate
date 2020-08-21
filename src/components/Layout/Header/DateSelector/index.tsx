@@ -11,6 +11,7 @@ import { filterContext } from '~/common/contexts'
 import customLabelsDateRange from './customLabels'
 
 const StyledDateRangePicker = styled(DateRangePicker)`
+  line-height: initial;
   position: absolute;
   z-index: 10;
   top: 72px;

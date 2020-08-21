@@ -5,21 +5,27 @@ import {
   faCalendar as faCalendarReg,
   faSignOutAlt as faSignOutAltReg,
   faUser as faUserReg,
+  faEdit as faEditReg,
+  faTrash as faTrashReg,
 } from '@fortawesome/pro-regular-svg-icons'
 
 // Solid
-import { faExpand, faCompress, faChevronRight } from '@fortawesome/pro-solid-svg-icons'
+import { faExpand, faCompress, faChevronRight, faSpinnerThird } from '@fortawesome/pro-solid-svg-icons'
 
 // duoTone
-// import { faBadgeDollar as faBadgeDollarDuo } from '@fortawesome/pro-duotone-svg-icons'
+// import { faSpinnerThird as faSpinnerThirdDuo } from '@fortawesome/pro-duotone-svg-icons'
 
 library.add(
   // Regular
   faCalendarReg,
   faSignOutAltReg,
   faUserReg,
+  faEditReg,
+  faTrashReg,
   // Solid
   faExpand,
   faCompress,
-  faChevronRight
+  faChevronRight,
+  faSpinnerThird
+  // Duo
 )

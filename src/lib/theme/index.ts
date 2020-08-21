@@ -1,7 +1,14 @@
 import defaultTheme from './default'
 
-const MAP = {
-  defaultTheme,
+const themeMap = {
+  default: defaultTheme,
 }
 
-export default MAP[process.env.THEME] || defaultTheme
+export const getTheme = (themeType: string) => {
+  if (!process.env.THEME) return themeMap.default(themeType)
+  return themeMap[process.env.THEME](themeType)
+}
+
+const theme = themeMap[process.env.THEME] ? themeMap[process.env.THEME]('light') : themeMap.default('light')
+
+export default theme

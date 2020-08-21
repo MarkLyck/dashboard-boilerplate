@@ -12,9 +12,8 @@ import theme from '~/lib/theme'
 
 const StyledHeader = styled(Layout.Header)`
   && {
-    background: white;
+    background: ${(props) => props.theme.colors.background.appBar};
     padding: 0 32px;
-    line-height: inherit;
   }
   box-sizing: border-box;
   display: flex;
@@ -28,30 +27,26 @@ const Logo = styled.img`
   width: auto;
 `
 
-const StyledMenu = styled(Menu)`
-  && {
-    line-height: 64px;
-  }
-`
-
 const AppHeader = () => {
   const { t } = useTranslation()
   return (
     <StyledHeader>
       <Flex alignItems="center">
-        <Logo src={theme.logos.horizontal} />
-        <StyledMenu mode="horizontal">
-          <Menu.Item key="1">
-            <Link href="/">
-              <a>{t('common.home').cap()}</a>
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Link href="/admin">
-              <a>{t('common.admin').cap()}</a>
-            </Link>
-          </Menu.Item>
-        </StyledMenu>
+        <Space>
+          <Logo src={theme.logos.horizontal} />
+          <Menu mode="horizontal">
+            <Menu.Item key="1">
+              <Link href="/">
+                <a>{t('common.home').cap()}</a>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="2">
+              <Link href="/admin">
+                <a>{t('common.admin').cap()}</a>
+              </Link>
+            </Menu.Item>
+          </Menu>
+        </Space>
       </Flex>
       <Flex alignItems="center">
         <Space>

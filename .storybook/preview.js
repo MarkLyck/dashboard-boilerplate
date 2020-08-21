@@ -5,6 +5,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import withGlobalStyles from './decorators/withGlobalStyles'
 import withRouter from './decorators/withRouter'
 import withProviders from './decorators/withProviders'
+// import withTheme from './decorators/withTheme'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
 
 // icons
@@ -20,6 +21,7 @@ addParameters({
 addDecorator(withGlobalStyles)
 addDecorator(withRouter)
 addDecorator(withProviders)
+// addDecorator(withTheme)
 
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },

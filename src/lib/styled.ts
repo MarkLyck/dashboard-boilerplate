@@ -1,6 +1,7 @@
 import styled, { CreateStyled } from '@emotion/styled'
-import theme from '~/lib/theme'
+import { getTheme } from '~/lib/theme'
 
-type Theme = typeof theme
+const theme = getTheme('light')
+type ThemeType = typeof theme
 
-export default styled as CreateStyled<Theme>
+export default styled as CreateStyled<ThemeType>
