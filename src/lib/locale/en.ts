@@ -1,6 +1,7 @@
 export default {
   translation: {
     common: {
+      language: 'language',
       column: 'column',
       equals: 'equals',
       contains: 'contains',

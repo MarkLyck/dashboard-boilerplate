@@ -10,6 +10,7 @@ import {
   faPlus as faPlusReg,
   faMinus as faMinusReg,
   faFilter as faFilterReg,
+  faGlobe as faGlobeReg,
 } from '@fortawesome/pro-regular-svg-icons'
 
 // Solid
@@ -38,6 +39,7 @@ library.add(
   faPlusReg,
   faMinusReg,
   faFilterReg,
+  faGlobeReg,
   // Solid
   faExpand,
   faCompress,

@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled'
 import Search from './Search'
 import DateSelector from './DateSelector'
-import LanguageSelector from './LanguageSelector'
 import UserMenu from './UserMenu'
 import theme from '~/lib/theme'
 
@@ -53,7 +52,6 @@ const AppHeader = () => {
           <Search />
           <DateSelector />
           <UserMenu />
-          <LanguageSelector />
         </Space>
       </Flex>
     </StyledHeader>
