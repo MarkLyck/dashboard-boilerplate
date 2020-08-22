@@ -1,1 +1,2 @@
-export { default as useGlobalFilter } from './useGlobalFilter'
+export { default as useQuery } from './useQuery'
+export { default as useLazyQuery } from './useLazyQuery'
