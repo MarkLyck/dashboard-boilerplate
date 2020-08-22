@@ -81,9 +81,9 @@ const Container = styled.div`
   }
 `
 
-const MarkerItem = ({ point, color, selectedId, setCenter, renderSite }) => {
+const MarkerItem = ({ point, color, selectedId, setCenter, renderPoint }) => {
   const handleSiteRender = () => {
-    renderSite(point)
+    renderPoint(point)
     window.setTimeout(() => {
       setCenter([point.lon, point.lat])
     }, 0)

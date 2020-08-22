@@ -17,6 +17,7 @@ const theme: any = {
     },
     border: '#ebedf5',
     background: {
+      default: 'white',
       appBar: 'white',
       primary: '#F9F9FC',
     },

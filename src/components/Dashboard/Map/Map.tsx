@@ -19,6 +19,7 @@ const MapBox = ReactMapboxGl({
 
 const Container = styled(Box)`
   height: 100%;
+  width: 100%;
   padding: 0;
   position: relative;
 `
@@ -74,13 +75,13 @@ export interface MapType {
 
 const Map = ({
   data = [
-    // {
-    //   id: '1',
-    //   label: 'label 1',
-    //   lat: 5,
-    //   lon: 5,
-    //   state: 1,
-    // },
+    {
+      id: '1',
+      name: 'Marks Site',
+      lat: 5,
+      lon: 5,
+      state: 1,
+    },
   ],
   isLoading,
   error,
@@ -89,6 +90,7 @@ const Map = ({
   mapExpanded,
   colorMap = () => DEFAULT_COLOR,
   selectedId,
+  renderPoint,
 }: MapType) => {
   const [zoom] = useState([2])
   const [center, setCenter] = useState(
@@ -139,7 +141,7 @@ const Map = ({
                   <MarkerItem
                     point={point}
                     color={color}
-                    renderSite={console.log}
+                    renderPoint={renderPoint}
                     setCenter={setCenter}
                     selectedId={selectedId}
                   />
@@ -157,7 +159,7 @@ const Map = ({
                   <MarkerItem
                     point={point}
                     color={color}
-                    renderSite={console.log}
+                    renderPoint={console.log}
                     setCenter={setCenter}
                     selectedId={selectedId}
                   />
